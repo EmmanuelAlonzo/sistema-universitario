@@ -1,0 +1,151 @@
+# TEST DATA FOR EDUCATIONAL MANAGEMENT SYSTEM
+
+## SYSTEM CONFIGURATION
+University Name: Universidad Tecnológica
+Admin Email: admin@universidad.edu
+Semester Period: 2024-2025
+Primary Color: #4F46E5
+Background Color: #F9FAFB
+Text Color: #111827
+
+## CAREER STRUCTURE
+1. Ingeniería en Sistemas
+   Semester 1:
+   - PRG101: Programación I (4 credits)
+   - MAT101: Matemática I (4 credits)
+   - FIS101: Física I (3 credits)
+   - ING101: Inglés I (2 credits)
+   
+   Semester 2:
+   - PRG102: Programación II (4 credits)
+   - MAT102: Matemática II (4 credits)
+   - FIS102: Física II (3 credits)
+   - ING102: Inglés II (2 credits)
+
+2. Medicina
+   Semester 1:
+   - MED101: Anatomía I (5 credits)
+   - BIO101: Biología Celular (4 credits)
+   - QUI101: Química General (4 credits)
+   - HUM101: Introducción a la Medicina (3 credits)
+   
+   Semester 2:
+   - MED201: Anatomía II (5 credits)
+   - BIO201: Biología Molecular (4 credits)
+   - QUI201: Química Orgánica (4 credits)
+   - FSL201: Fisiología I (3 credits)
+
+3. Derecho
+   Semester 1:
+   - DER101: Introducción al Derecho (4 credits)
+   - HIS101: Historia del Derecho (3 credits)
+   - SOC101: Sociología Jurídica (3 credits)
+   - MET101: Metodología (2 credits)
+   
+   Semester 2:
+   - CIV201: Derecho Civil I (4 credits)
+   - CON201: Derecho Constitucional (4 credits)
+   - EST201: Teoría del Estado (3 credits)
+   - FIL201: Filosofía del Derecho (3 credits)
+
+4. Administración
+   Semester 1:
+   - ADM101: Fundamentos de Administración (4 credits)
+   - MAT101: Matemática Empresarial (3 credits)
+   - CON101: Contabilidad I (4 credits)
+   - ECO101: Economía I (3 credits)
+   
+   Semester 2:
+   - ADM201: Administración de Personal (4 credits)
+   - EST201: Estadística (3 credits)
+   - CON102: Contabilidad II (4 credits)
+   - ECO102: Economía II (3 credits)
+
+## USER PERMISSIONS BY ROLE
+- Administrador: all
+- Coordinador: manage_students, manage_teachers, assign_subjects, view_reports, manage_schedules
+- Maestro: view_students, manage_grades, create_assignments, view_schedule
+- Estudiante: view_grades, submit_assignments, view_schedule, access_forums
+- Secretaria: manage_students, manage_documents, view_reports
+- Soporte IT: manage_users, system_config, view_reports
+
+## ADMINISTRATIVE USERS
+1. Administrator
+   - Name: Carlos Administrador
+   - Username: admin
+   - Password: admin123
+   - Email: admin@universidad.edu
+   - Phone: 555-0001
+   - Employee ID: EMP001
+   - Role: administrador
+   - Status: active
+
+2. Coordinator
+   - Name: María Coordinadora Sistemas
+   - Username: coord.sistemas
+   - Password: coord123
+   - Email: coord.sistemas@universidad.edu
+   - Phone: 555-0002
+   - Employee ID: EMP002
+   - Role: coordinador
+   - Status: active
+
+3. Teacher
+   - Name: Dr. Roberto Martínez
+   - Username: prof.martinez
+   - Password: prof123
+   - Email: prof.martinez@universidad.edu
+   - Phone: 555-0003
+   - Employee ID: EMP003
+   - Role: maestro
+   - Assigned Subjects: 
+     * PRG101: Programación I (4 credits)
+     * PRG102: Programación II (4 credits)
+   - Status: active
+
+4. Secretary
+   - Name: Ana García Secretaria
+   - Username: sec.garcia
+   - Password: sec123
+   - Email: sec.garcia@universidad.edu
+   - Phone: 555-0004
+   - Employee ID: EMP004
+   - Role: secretaria
+   - Status: active
+
+5. IT Support
+   - Name: Luis Soporte IT
+   - Username: it.support
+   - Password: it123
+   - Email: it.support@universidad.edu
+   - Phone: 555-0005
+   - Employee ID: EMP005
+   - Role: soporte
+   - Status: active
+
+## STUDENT USERS
+1. Student (Semester 2)
+   - Name: Juan Pérez
+   - Username: juan.perez
+   - Password: est123
+   - Email: juan.perez@universidad.edu
+   - Phone: 555-1001
+   - Student ID: STU1001
+   - Career: Ingeniería en Sistemas
+   - Semester: 2
+   - Enrolled Courses:
+     * PRG101: Programación I (4 credits) - Teacher: Dr. Martínez, Classroom: Aula 201, Progress: 75%
+     * MAT101: Matemática I (4 credits) - Teacher: Prof. García, Classroom: Aula 105, Progress: 80%
+   - Status: active
+
+2. Student (Semester 1)
+   - Name: María González
+   - Username: maria.gonzalez
+   - Password: est123
+   - Email: maria.gonzalez@universidad.edu
+   - Phone: 555-1002
+   - Student ID: STU1002
+   - Career: Ingeniería en Sistemas
+   - Semester: 1
+   - Enrolled Courses: None
+   - Status: active
