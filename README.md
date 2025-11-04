@@ -1,59 +1,105 @@
-# Sistema Universitario Completo
+# Sistema Universitario - Arquitectura MVC
 
-Sistema de gestión académica universitaria con diferentes roles y funcionalidades.
+Sistema de gestión académica universitaria desarrollado con **PHP, MySQL y JavaScript (AJAX)** siguiendo el patrón **Modelo-Vista-Controlador (MVC)**.
 
-## Características
+## ✨ Características del Proyecto
 
-- Sistema de autenticación multi-rol (Administrador, Coordinador, Maestro, Estudiante, Secretaria, Soporte IT)
-- Gestión de estudiantes y materias
-- Asignación de horarios
-- Control de calificaciones y tareas
-- Sistema de mensajería y eventos
-- Foros académicos
-- Gestión de pagos
+✅ **Estructura MVC** - Separación clara de Modelo, Vista y Controlador  
+✅ **Funcionalidad CRUD Completa** - Create, Read, Update, Delete en todas las entidades  
+✅ **Autenticación y Seguridad** - Sesiones PHP con contraseñas hasheadas (password_hash)  
+✅ **Integración JavaScript/AJAX** - Operaciones dinámicas sin recargar la página  
+✅ **Claridad en el Funcionamiento** - Código documentado y organizado
 
-## Usuarios de Prueba
+## 🏗️ Arquitectura MVC
 
-### Administrador
-- Usuario: `admin`
-- Contraseña: `admin123`
+```
+Modelo (models/)     → Lógica de datos y acceso a BD
+Vista (views/)       → Interfaz de usuario (HTML/PHP)
+Controlador (controllers/) → Lógica de negocio y procesamiento AJAX
+```
 
-### Coordinador
-- Usuario: `coord.sistemas`
-- Contraseña: `coord123`
+## 🚀 Instalación Rápida
 
-### Maestro
-- Usuario: `prof.martinez`
-- Contraseña: `prof123`
+### Requisitos
+- PHP 7.4+
+- MySQL 5.7+
+- Apache/Nginx (o XAMPP/WAMP)
 
-### Secretaria
-- Usuario: `sec.garcia`
-- Contraseña: `sec123`
+### Pasos
 
-### Soporte IT
-- Usuario: `it.support`
-- Contraseña: `it123`
+1. **Clonar el repositorio**
+```bash
+git clone https://github.com/EmmanuelAlonzo/sistema-universitario.git
+```
 
-## Tecnologías Utilizadas
+2. **Crear la base de datos**
+```bash
+mysql -u root -p < database/schema.sql
+```
 
-- HTML5
-- TailwindCSS
-- JavaScript (Vanilla)
-- Data SDK y Element SDK para gestión de datos
+3. **Configurar credenciales**
+Editar `config/database.php` con tus datos de MySQL
 
-## Instalación
+4. **Acceder al sistema**
+Abrir en navegador: `http://localhost/Proyecto final/`
 
-1. Clonar el repositorio
-2. Abrir `Poyecto Final.html` en un navegador web
-3. Usar las credenciales de prueba para acceder
+## 👥 Usuarios de Prueba
 
-## Uso
+| Rol | Usuario | Contraseña |
+|-----|---------|------------|
+| 🔧 Administrador | `admin` | `admin123` |
+| 👨‍💼 Coordinador | `coord.sistemas` | `coord123` |
+| 👨‍🏫 Maestro | `prof.martinez` | `prof123` |
+| 📋 Secretaria | `sec.garcia` | `sec123` |
+| 🎓 Estudiante | `juan.perez` | `est123` |
 
-El sistema permite diferentes funcionalidades según el rol del usuario:
+## 🛠️ Tecnologías
 
-- **Administradores**: Acceso completo al sistema
-- **Coordinadores**: Gestión de estudiantes, maestros y materias
-- **Maestros**: Gestión de cursos, calificaciones y tareas
-- **Estudiantes**: Acceso a materias, tareas y calificaciones
-- **Secretaria**: Registro de estudiantes y documentos
-- **Soporte IT**: Gestión de usuarios y sistema
+- **Backend:** PHP 7.4+ (PDO para BD)
+- **Base de Datos:** MySQL 5.7+
+- **Frontend:** HTML5 + TailwindCSS
+- **JavaScript:** Vanilla JS con Fetch API (AJAX)
+- **Arquitectura:** MVC (Modelo-Vista-Controlador)
+- **Seguridad:** Sessions, Password Hashing, Prepared Statements
+
+## 📊 Funcionalidad CRUD
+
+Cada entidad (Estudiantes, Usuarios, Materias) cuenta con:
+
+- **CREATE** - Crear nuevos registros con validación
+- **READ** - Listar y buscar registros
+- **UPDATE** - Editar registros existentes
+- **DELETE** - Eliminar registros con confirmación
+
+Todas las operaciones se realizan vía **AJAX** para mejor experiencia de usuario.
+
+## 📁 Estructura del Proyecto
+
+```
+config/          # Configuración de BD
+models/          # Modelos (Usuario, Estudiante, Materia)
+controllers/     # Controladores con lógica de negocio
+views/           # Vistas (Login, Dashboard, Gestión)
+assets/js/       # JavaScript con AJAX
+database/        # Scripts SQL
+```
+
+## 📖 Documentación Completa
+
+Ver [INSTRUCCIONES.md](INSTRUCCIONES.md) para documentación detallada del proyecto.
+
+## 🔐 Seguridad
+
+- Autenticación basada en sesiones PHP
+- Contraseñas hasheadas con `password_hash()`
+- Prepared Statements (PDO) contra SQL Injection
+- Validación y sanitización de datos
+- Control de permisos por rol
+
+## 📝 Versión Anterior
+
+La versión HTML/JavaScript original se encuentra en: `Poyecto Final.html`
+
+## 👨‍💻 Desarrollo
+
+Proyecto desarrollado como sistema académico universitario siguiendo las mejores prácticas de desarrollo web.

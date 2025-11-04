@@ -1,0 +1,41 @@
+# Apache Configuration
+
+# Prevenir acceso a archivos .git
+<FilesMatch "^\.git">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Prevenir listado de directorios
+Options -Indexes
+
+# Habilitar rewrite engine
+RewriteEngine On
+
+# Redirigir a index.php si el archivo no existe
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Configuración de errores personalizados (opcional)
+# ErrorDocument 404 /views/404.php
+# ErrorDocument 500 /views/500.php
+
+# Seguridad adicional
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|sql)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Headers de seguridad
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
+# Configuración de PHP (si es necesario)
+<IfModule mod_php7.c>
+    php_flag display_errors Off
+    php_value upload_max_filesize 10M
+    php_value post_max_size 10M
+</IfModule>
